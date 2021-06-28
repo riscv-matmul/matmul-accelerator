@@ -3,7 +3,7 @@
 ## 单元测试
 ```
 cd rocc/sbt
-sbt "test:runMain matmul.Launcher VectorMul"
+sbt "test:runMain matmul.Launcher VectorMulAdd"
 ```
 
 ## 集成到 Rocket-chip (需要装好RISCV工具链)
@@ -25,3 +25,5 @@ riscv64-unknown-elf-gcc -static filename.c -o test.elf
 ../rocket-chip/emulator/emulator-* pk test.elf
 ```
 
+### 注意
+该项目依赖特定版本的rocket-chip，在其他版本上不保证正常编译及预想输出
